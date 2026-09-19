@@ -22,6 +22,19 @@ A smart AI-powered Google Chrome extension that automates multiple-choice quizze
 4. Click **Load unpacked** and select this repository folder.
 5. Right-click the extension icon, select **Options**, and input your API Keys.
 
+### 🔑 How to Get API Keys
+To use this extension, you need an active API Key from either Groq or OpenRouter.
+
+**1. Groq API (Super Fast & Free)**
+- Go to [console.groq.com/keys](https://console.groq.com/keys)
+- Login with your account.
+- Click **"Create API Key"**, copy the generated key (starts with `gsk_`), and paste it into the extension's options page.
+
+**2. OpenRouter API (Smart Failover & Many Free Models)**
+- Go to [openrouter.ai/keys](https://openrouter.ai/keys)
+- Login with your account.
+- Click **"Create Key"**, copy the generated key (starts with `sk-or-v1-`), and paste it into the extension's options page.
+
 ---
 
 ## 🇮🇩 Bahasa Indonesia
@@ -41,10 +54,24 @@ Ekstensi Google Chrome cerdas yang mengotomatiskan pengerjaan kuis pilihan ganda
 4. Klik **Load unpacked** dan pilih folder repositori ini.
 5. Klik kanan pada ikon ekstensi, pilih **Options**, dan masukkan API Key Anda.
 
+### 🔑 Cara Mendapatkan API Key
+Untuk menggunakan ekstensi ini, Anda membutuhkan API Key dari Groq atau OpenRouter.
+
+**1. Groq API (Super Fast & Free)**
+- pergi ke [console.groq.com/keys](https://console.groq.com/keys)
+- Login .
+- klik **"Create API Key"**, salin API key (biasa awalannya `gsk_`), dan tempel di halaman option extensionnya.
+
+**2. OpenRouter API (Smart Failover & Many Free Models)**
+- Go to [openrouter.ai/keys](https://openrouter.ai/keys)
+- Login with your account.
+- klik **"Create Key"**, salin API key (biasa awalannya `sk-or-v1-`), dan tempel di halaman option extensionnya.
+
 ---
 
 ## 📊 System Architecture & Flow (Arsitektur Sistem)
 
+```mermaid
 flowchart TD
     A([Mulai: User Tekan Alt + A]) --> B{Sistem Aktif?}
     B -- Ya --> Z([Abaikan])
@@ -89,3 +116,4 @@ flowchart TD
     X --> Y([Hentikan Sistem])
     
     U -- Tidak Ditemukan --> Y
+```
