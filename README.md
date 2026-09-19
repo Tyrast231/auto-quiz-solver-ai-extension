@@ -45,7 +45,6 @@ Ekstensi Google Chrome cerdas yang mengotomatiskan pengerjaan kuis pilihan ganda
 
 ## 📊 System Architecture & Flow (Arsitektur Sistem)
 
-```mermaid
 flowchart TD
     A([Mulai: User Tekan Alt + A]) --> B{Sistem Aktif?}
     B -- Ya --> Z([Abaikan])
@@ -82,11 +81,11 @@ flowchart TD
     T -- Belum --> O
     T -- Sudah --> U{Cari Tombol Navigasi}
     
-    U -- Tombol "Berikutnya/Next" --> V[Simulasi Klik Berikutnya]
+    U -- Tombol Berikutnya/Next --> V[Simulasi Klik Berikutnya]
     V --> W[Jeda 3.5 Detik]
     W --> C
     
-    U -- Tombol "Kirim/Submit" --> X[Tampilkan Alert Peninjauan Manual]
+    U -- Tombol Kirim/Submit --> X[Tampilkan Alert Peninjauan Manual]
     X --> Y([Hentikan Sistem])
     
     U -- Tidak Ditemukan --> Y
