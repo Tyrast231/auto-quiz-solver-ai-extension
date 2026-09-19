@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengaturan Auto Clicker AI</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 450px; }
+        .grup { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; border-radius: 4px; border: 1px solid #ccc; }
+        button { padding: 10px 15px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 4px; width: 100%; font-weight: bold; margin-top: 10px; }
+        button:hover { background: #0056b3; }
+        
+        /* CSS untuk menyembunyikan elemen secara bawaan */
+        #grupModelOR { display: none; background: #f8f9fa; padding: 10px; border-left: 4px solid #007bff; }
+    </style>
+</head>
+<body>
+    <h2>Pengaturan Sistem AI</h2>
+
+    <div class="grup">
+        <label>Pilih Penyedia AI Aktif:</label>
+        <select id="pilihanProvider">
+            <option value="groq">Groq API (Super Cepat)</option>
+            <option value="openrouter">OpenRouter (Banyak Pilihan Model)</option>
+        </select>
+    </div>
+
+    <!-- Menu ini hanya muncul jika OpenRouter dipilih -->
+    <div class="grup" id="grupModelOR">
+        <label>Pilih Model OpenRouter:</label>
+        <select id="pilihanModelOR">
+            <option value="auto">Rekomendasi</option>
+            <option value="deepseek/deepseek-v4-flash-0731">DeepSeek v4 Flash (Super Cepat)</option>
+            <option value="qwen/qwen3.8-27b">Qwen 3.8 (27B) - Logika Tingkat Tinggi</option>
+            <option value="qwen/qwen3.7-flash">Qwen 3.7 Flash - Ringan & Cerdas</option>
+            <option value="qwen/qwen-2-7b-instruct:free">Qwen 2 (7B) - Gratis</option>
+            <option value="google/gemma-4-26b-a4b-it:free">Gemma 4 (26B) - Gratis</option>
+            <option value="minimax/minimax-m3:free">MiniMax M3 - Gratis</option>
+            <option value="google/gemma-4-31b-it:free">Gemma 4 (31B) - Gratis</option>
+        </select>
+    </div>
+
+    <div class="grup">
+        <label>API Key Groq:</label>
+        <input type="text" id="keyGroq" placeholder="gsk_...">
+    </div>
+
+    <div class="grup">
+        <label>API Key OpenRouter:</label>
+        <input type="text" id="keyOpenRouter" placeholder="sk-or-v1-...">
+    </div>
+
+    <button id="simpanBtn">Simpan Pengaturan</button>
+    <p id="status" style="color: green; font-weight: bold; text-align: center; margin-top: 15px;"></p>
+
+    <script src="options.js"></script>
+</body>
+</html>
